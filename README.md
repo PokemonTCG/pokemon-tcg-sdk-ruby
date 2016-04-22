@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby.svg?branch=master)](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PokemonTCG/pokemon-tcg-sdk-ruby.svg)](https://gemnasium.com/github.com/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Code Climate](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby)
-[![Test Coverage](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/badges/coverage.svg)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/coverage)
+[![Coverage Status](https://coveralls.io/repos/github/PokemonTCG/pokemon-tcg-sdk-ruby/badge.svg?branch=master)](https://coveralls.io/github/PokemonTCG/pokemon-tcg-sdk-ruby?branch=master)
 
 This is the Pokémon TCG SDK Ruby implementation. It is a wrapper around the Pokémon TCG API of [pokemontcg.io](http://pokemontcg.io/).
 
