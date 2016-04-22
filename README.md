@@ -1,6 +1,8 @@
 # Pokémon TCG SDK
 
+[![Gem Version](https://badge.fury.io/rb/pokemon_tcg_sdk.svg)](https://badge.fury.io/rb/pokemon_tcg_sdk)
 [![Build Status](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby.svg?branch=master)](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby)
+[![Dependency Status](https://gemnasium.com/badges/github.com/PokemonTCG/pokemon-tcg-sdk-ruby.svg)](https://gemnasium.com/github.com/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Code Climate](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Test Coverage](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/badges/coverage.svg)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/coverage)
 
