@@ -47,6 +47,7 @@ To change the API version (currently defaults to version 1)
 
     id
     name
+    national_pokedex_number
     image_url
     subtype
     supertype
