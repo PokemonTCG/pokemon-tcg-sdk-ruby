@@ -8,6 +8,7 @@ class CardTest < Minitest::Test
 
       assert_equal 'xy7-57', card.id
       assert_equal 'Giratina-EX', card.name
+      assert_equal 487, card.national_pokedex_number
       assert_equal 'https://s3.amazonaws.com/pokemontcg/xy7/57.png', card.image_url
       assert_equal 'EX', card.subtype
       assert_equal 'Pokémon', card.supertype

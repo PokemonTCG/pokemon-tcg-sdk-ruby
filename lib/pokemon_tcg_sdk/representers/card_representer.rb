@@ -23,6 +23,7 @@ module Pokemon
     property :series
     property :set
     property :set_code, as: :setCode
+    property :national_pokedex_number, as: :nationalPokedexNumber
     
     collection :retreat_cost, as: :retreatCost
     collection :text
