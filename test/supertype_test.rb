@@ -5,7 +5,7 @@ class SupertypeTest < Minitest::Test
     VCR.use_cassette('all_supertypes') do
       types = Pokemon::Supertype.all
       
-      assert_equal ["Pokémon","Energy","Trainer"], types
+      assert (["Pokémon","Energy","Trainer"] - types).empty?
     end
   end
 end
