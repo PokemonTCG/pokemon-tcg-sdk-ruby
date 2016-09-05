@@ -2,9 +2,11 @@ require 'roar/json'
 require_relative 'attack_representer'
 require_relative 'type_value_representer'
 require_relative 'ability_representer'
+require_relative 'ancient_trait_representer'
 require_relative '../attack'
 require_relative '../type_value'
 require_relative '../ability'
+require_relative '../ancient_trait'
 
 module Pokemon
   module CardRepresenter
@@ -16,6 +18,7 @@ module Pokemon
     property :subtype
     property :supertype
     property :ability, extend: AbilityRepresenter, class: Ability
+    property :ancient_trait, as: :ancientTrait, extend: AncientTraitRepresenter, class: AncientTrait
     property :hp
     property :number
     property :artist

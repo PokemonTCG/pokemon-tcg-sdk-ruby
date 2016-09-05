@@ -38,6 +38,7 @@ To change the API version (currently defaults to version 1)
     Supertype
     Subtype
     Ability
+    AncientTrait
     Attack
     TypeValue
 
@@ -52,6 +53,7 @@ To change the API version (currently defaults to version 1)
     subtype
     supertype
     ability
+    ancient_trait
     hp
     number
     artist
@@ -76,6 +78,11 @@ To change the API version (currently defaults to version 1)
     release_date
 
 #### Ability
+
+    name
+    text
+
+#### AncientTrait
 
     name
     text

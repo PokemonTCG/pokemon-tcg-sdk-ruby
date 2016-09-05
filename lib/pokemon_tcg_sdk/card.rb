@@ -8,7 +8,7 @@ module Pokemon
     attr_accessor :id, :name, :image_url, :subtype, :supertype, :ability,
                   :hp, :number, :artist, :rarity, :series, :set, :set_code,
                   :retreat_cost, :text, :types, :attacks, :weaknesses, :resistances,
-                  :national_pokedex_number
+                  :national_pokedex_number, :ancient_trait
                   
     # Get the resource string
     #
