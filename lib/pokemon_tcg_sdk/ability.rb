@@ -5,6 +5,6 @@ module Pokemon
     include Roar::JSON
     include AbilityRepresenter
   
-    attr_accessor :name, :text
+    attr_accessor :name, :text, :type
   end
 end

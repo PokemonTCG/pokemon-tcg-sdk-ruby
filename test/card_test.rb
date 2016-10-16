@@ -14,6 +14,7 @@ class CardTest < Minitest::Test
       assert_equal 'Pokémon', card.supertype
       assert_equal 'Renegade Pulse', card.ability.name
       assert_equal "Prevent all effects of attacks, including damage, done to this Pokémon by your opponent's Mega Evolution Pokémon.", card.ability.text
+      assert_equal 'Ability', card.ability.type
       assert_equal "170", card.hp
       assert_equal ["Colorless","Colorless","Colorless"], card.retreat_cost
       assert_equal "57", card.number

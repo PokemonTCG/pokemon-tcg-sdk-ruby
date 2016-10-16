@@ -6,5 +6,6 @@ module Pokemon
     
     property :name
     property :text
+    property :type
   end
 end
