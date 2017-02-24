@@ -50,6 +50,7 @@ To change the API version (currently defaults to version 1)
     name
     national_pokedex_number
     image_url
+    image_url_hi_res
     subtype
     supertype
     ability
