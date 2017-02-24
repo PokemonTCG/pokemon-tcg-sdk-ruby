@@ -15,6 +15,7 @@ module Pokemon
     property :id
     property :name
     property :image_url, as: :imageUrl
+    property :image_url_hi_res, as: :imageUrlHiRes
     property :subtype
     property :supertype
     property :ability, extend: AbilityRepresenter, class: Ability
