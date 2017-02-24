@@ -76,12 +76,14 @@ To change the API version (currently defaults to version 1)
     series
     total_cards
     standard_legal
+    expanded_legal
     release_date
 
 #### Ability
 
     name
     text
+    type
 
 #### AncientTrait
 
