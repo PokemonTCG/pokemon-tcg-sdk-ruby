@@ -68,6 +68,7 @@ To change the API version (currently defaults to version 1)
     attacks
     weaknesses
     resistances
+    evolves_from
 
 #### Set
 
