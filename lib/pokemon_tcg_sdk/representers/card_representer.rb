@@ -28,6 +28,7 @@ module Pokemon
     property :set
     property :set_code, as: :setCode
     property :national_pokedex_number, as: :nationalPokedexNumber
+    property :evolves_from, as: :evolvesFrom
     
     collection :retreat_cost, as: :retreatCost
     collection :text
