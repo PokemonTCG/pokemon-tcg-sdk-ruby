@@ -5,8 +5,9 @@ module Pokemon
     include Roar::JSON
     include SetRepresenter
 
-    attr_accessor :code, :name, :series, :total_cards, :standard_legal, :expanded_legal, :release_date
-                  
+    attr_accessor :code, :name, :series, :total_cards, :standard_legal, :expanded_legal, :release_date,
+                  :symbol_url, :ptcgo_code
+
     # Get the resource string
     #
     # @return [String] The API resource string

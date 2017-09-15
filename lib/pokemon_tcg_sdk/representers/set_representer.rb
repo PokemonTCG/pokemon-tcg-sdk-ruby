@@ -7,6 +7,8 @@ module Pokemon
     property :code
     property :name
     property :series
+    property :ptcgo_code, as: :ptcgoCode
+    property :symbol_url, as: :symbolUrl
     property :total_cards, as: :totalCards
     property :standard_legal, as: :standardLegal
     property :expanded_legal, as: :expandedLegal
