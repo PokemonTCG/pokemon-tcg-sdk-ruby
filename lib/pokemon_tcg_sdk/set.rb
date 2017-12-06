@@ -1,13 +1,7 @@
-require_relative 'representers/set_representer'
+require_relative 'hashie_snake'
 
 module Pokemon
-  class Set
-    include Roar::JSON
-    include SetRepresenter
-
-    attr_accessor :code, :name, :series, :total_cards, :standard_legal, :expanded_legal, :release_date,
-                  :symbol_url, :ptcgo_code
-
+  class Set < HashieSnake
     # Get the resource string
     #
     # @return [String] The API resource string

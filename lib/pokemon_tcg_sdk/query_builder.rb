@@ -30,7 +30,7 @@ module Pokemon
         raise ArgumentError, 'Resource not found'
       end
       
-      type.new.from_json(response.body[singular_resource].to_json)
+      type.new(response.body[singular_resource])
     end
     
     # Get all resources from a query by paging through data
@@ -50,7 +50,7 @@ module Pokemon
         response = RestClient.get(@type.Resource, @query)
         data = response.body[@type.Resource]      
         if !data.empty?
-          data.each {|item| list << @type.new.from_json(item.to_json)}
+          data.each {|item| list << @type.new(item)}
           
           if !fetch_all
             break

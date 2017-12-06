@@ -1,14 +1,7 @@
-require_relative 'representers/card_representer'
+require_relative 'hashie_snake'
 
 module Pokemon
-  class Card
-    include Roar::JSON
-    include CardRepresenter
-    
-    attr_accessor :id, :name, :image_url, :image_url_hi_res, :subtype, :supertype, :ability,
-                  :hp, :number, :artist, :rarity, :series, :set, :set_code,
-                  :retreat_cost, :text, :types, :attacks, :weaknesses, :resistances,
-                  :national_pokedex_number, :ancient_trait, :evolves_from
+  class Card < HashieSnake
 
     # Get the resource string
     #
