@@ -33,7 +33,7 @@ module Pokemon
     # Adds a parameter to the hash of query parameters
     #
     # @param args [Hash] the query parameter
-    # @return [QueryBuilder] the QueryBuilder
+    # @return [Array<Set>] Array of Set objects
     def self.where(args)
       QueryBuilder.new(Set).where(args)
     end
