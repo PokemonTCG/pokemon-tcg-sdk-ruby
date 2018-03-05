@@ -6,7 +6,7 @@ module Pokemon
     include SetRepresenter
 
     attr_accessor :code, :name, :series, :total_cards, :standard_legal, :expanded_legal, :release_date,
-                  :symbol_url, :ptcgo_code
+                  :symbol_url, :logo_url, :ptcgo_code, :updated_at
 
     # Get the resource string
     #

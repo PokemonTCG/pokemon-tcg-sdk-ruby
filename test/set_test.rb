@@ -13,6 +13,7 @@ class SetTest < Minitest::Test
       assert_equal true, set.expanded_legal
       assert_equal "02/22/2016", set.release_date
       assert_equal "https://images.pokemontcg.io/g1/symbol.png", set.symbol_url
+      assert_equal "https://images.pokemontcg.io/g1/logo.png", set.logo_url
       assert_equal 'GEN', set.ptcgo_code
     end
   end

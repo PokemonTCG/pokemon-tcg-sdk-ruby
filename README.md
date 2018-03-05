@@ -77,9 +77,12 @@ To change the API version (currently defaults to version 1)
     name
     series
     total_cards
+    symbol_url
+    logo_url
     standard_legal
     expanded_legal
     release_date
+    updated_at
 
 #### Ability
 
