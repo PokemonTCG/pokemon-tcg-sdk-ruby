@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby.svg?branch=master)](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PokemonTCG/pokemon-tcg-sdk-ruby.svg)](https://gemnasium.com/github.com/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Code Climate](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby)
-[![Coverage Status](https://coveralls.io/repos/github/PokemonTCG/pokemon-tcg-sdk-ruby/badge.svg?branch=master)](https://coveralls.io/github/PokemonTCG/pokemon-tcg-sdk-ruby?branch=master)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ee9d7d6ee5f8276729bc/test_coverage)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/test_coverage)
 
 This is the Pokémon TCG SDK Ruby implementation. It is a wrapper around the Pokémon TCG API of [pokemontcg.io](http://pokemontcg.io/).
 
@@ -63,6 +63,7 @@ To change the API version (currently defaults to version 1)
     set
     set_code
     retreat_cost
+    converted_retreat_cost
     text
     types
     attacks
@@ -76,9 +77,12 @@ To change the API version (currently defaults to version 1)
     name
     series
     total_cards
+    symbol_url
+    logo_url
     standard_legal
     expanded_legal
     release_date
+    updated_at
 
 #### Ability
 
@@ -112,7 +116,7 @@ To change the API version (currently defaults to version 1)
 
 #### Filter Cards via query parameters
 
-    cards = Pokemon::Card.where(set: 'generations').where(supertype: 'pokemon').all
+    cards = Pokemon::Card.where(set: 'generations', supertype: 'pokemon')
     
 #### Find all cards (will take awhile)
 
@@ -120,7 +124,7 @@ To change the API version (currently defaults to version 1)
     
 #### Get all cards, but only a specific page of data
 
-    cards = Pokemon::Card.where(page: 5).where(pageSize: 100).all
+    cards = Pokemon::Card.where(page: 5, pageSize: 100)
     
 #### Find a set by code
 
@@ -128,7 +132,7 @@ To change the API version (currently defaults to version 1)
     
 #### Filter sets via query parameters
 
-    sets = Pokemon::Set.where(standardLegal: true).all
+    sets = Pokemon::Set.where(standardLegal: true)
     
 #### Get all Sets
 

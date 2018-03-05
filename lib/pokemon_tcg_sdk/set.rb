@@ -6,7 +6,7 @@ module Pokemon
     include SetRepresenter
 
     attr_accessor :code, :name, :series, :total_cards, :standard_legal, :expanded_legal, :release_date,
-                  :symbol_url, :ptcgo_code
+                  :symbol_url, :logo_url, :ptcgo_code, :updated_at
 
     # Get the resource string
     #
@@ -33,7 +33,7 @@ module Pokemon
     # Adds a parameter to the hash of query parameters
     #
     # @param args [Hash] the query parameter
-    # @return [QueryBuilder] the QueryBuilder
+    # @return [Array<Set>] Array of Set objects
     def self.where(args)
       QueryBuilder.new(Set).where(args)
     end

@@ -8,7 +8,7 @@ module Pokemon
     attr_accessor :id, :name, :image_url, :image_url_hi_res, :subtype, :supertype, :ability,
                   :hp, :number, :artist, :rarity, :series, :set, :set_code,
                   :retreat_cost, :text, :types, :attacks, :weaknesses, :resistances,
-                  :national_pokedex_number, :ancient_trait, :evolves_from
+                  :national_pokedex_number, :ancient_trait, :evolves_from, :converted_retreat_cost
 
     # Get the resource string
     #
@@ -35,7 +35,7 @@ module Pokemon
     # Adds a parameter to the hash of query parameters
     #
     # @param args [Hash] the query parameter
-    # @return [QueryBuilder] the QueryBuilder
+    # @return [Array<Card>] Array of Card objects
     def self.where(args)
       QueryBuilder.new(Card).where(args)
     end

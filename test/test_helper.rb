@@ -1,16 +1,14 @@
 #test/test_helper.rb
 require 'simplecov'
-require 'coveralls'
 require 'codeclimate-test-reporter'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter,
   CodeClimate::TestReporter::Formatter
 ])
 SimpleCov.start
 
-require_relative '../lib/pokemon_tcg_sdk'
+require 'pokemon_tcg_sdk'
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'vcr'

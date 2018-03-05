@@ -1,4 +1,4 @@
-require_relative 'test_helper'
+require 'test_helper'
 
 class SubtypeTest < Minitest::Test
   def test_all_returns_all_subtypes
