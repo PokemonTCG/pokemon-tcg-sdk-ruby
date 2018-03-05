@@ -1,5 +1,5 @@
 # encoding: UTF-8
-require_relative 'test_helper'
+require 'test_helper'
 
 class CardTest < Minitest::Test
   def test_find_returns_one_card
@@ -18,6 +18,7 @@ class CardTest < Minitest::Test
       assert_equal 'Ability', card.ability.type
       assert_equal "170", card.hp
       assert_equal ["Colorless","Colorless","Colorless"], card.retreat_cost
+      assert_equal 3, card.converted_retreat_cost
       assert_equal "57", card.number
       assert_equal "PLANETA", card.artist
       assert_equal "Rare Holo EX", card.rarity
@@ -46,7 +47,7 @@ class CardTest < Minitest::Test
   
   def test_where_with_page_size_and_page_returns_cards
     VCR.use_cassette('query_cards_pageSize') do
-      cards = Pokemon::Card.where(pageSize: 10).where(page: 1).all
+      cards = Pokemon::Card.where(pageSize: 10, page: 1)
 
       # make sure we got only 10 cards back
       assert cards.length == 10
@@ -57,10 +58,7 @@ class CardTest < Minitest::Test
 
   def test_all_returns_cards
     VCR.use_cassette('all_filtered') do
-      cards = Pokemon::Card.where(supertype: 'pokemon')
-                       .where(subtype: 'basic')
-                       .where(set: 'generations')
-                       .all
+      cards = Pokemon::Card.where(supertype: 'pokemon', subtype: 'basic', set: 'generations')
 
       card = cards[0]
       assert_equal 'Pokémon', card.supertype

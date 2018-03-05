@@ -35,7 +35,7 @@ class SetTest < Minitest::Test
   
   def test_where_filters_on_cards
     VCR.use_cassette('filtered_sets') do
-      sets = Pokemon::Set.where(standardLegal: true).all
+      sets = Pokemon::Set.where(standardLegal: true)
       
       assert_equal true, sets[0].standard_legal
     end
