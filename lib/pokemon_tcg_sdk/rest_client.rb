@@ -18,7 +18,7 @@ module Pokemon
     protected
     
     def self.client
-      @client = Faraday.new "#{API_URL}/v#{Pokemon.configuration.api_version}" do |conn|
+      @client = Faraday.new "#{API_URL}/v2" do |conn|
         conn.response :xml,  :content_type => /\bxml$/
         conn.response :json, :content_type => /\bjson$/    
         conn.adapter Faraday.default_adapter

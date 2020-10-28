@@ -5,14 +5,18 @@ require "pokemon_tcg_sdk/query_builder"
 require "pokemon_tcg_sdk/rest_client"
 require "pokemon_tcg_sdk/ability"
 require "pokemon_tcg_sdk/attack"
-require "pokemon_tcg_sdk/type_value"
 require "pokemon_tcg_sdk/type"
 require "pokemon_tcg_sdk/subtype"
 require "pokemon_tcg_sdk/supertype"
 require "pokemon_tcg_sdk/set"
+require "pokemon_tcg_sdk/weakness"
+require "pokemon_tcg_sdk/resistance"
+require "pokemon_tcg_sdk/legalities"
+require "pokemon_tcg_sdk/card_images"
+require "pokemon_tcg_sdk/set_images"
 
 module Pokemon
-  API_URL = 'https://api.pokemontcg.io'
+  API_URL = 'https://beta.pokemontcg.io'
 
   class << self
     attr_writer :configuration

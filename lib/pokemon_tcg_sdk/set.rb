@@ -1,12 +1,22 @@
-require_relative 'representers/set_representer'
-
 module Pokemon
   class Set
-    include Roar::JSON
-    include SetRepresenter
+    attr_accessor :id, :name, :series, :printed_total, :total, :legalities, :ptcgo_code, :release_date, :updated_at, :images
 
-    attr_accessor :code, :name, :series, :total_cards, :standard_legal, :expanded_legal, :release_date,
-                  :symbol_url, :logo_url, :ptcgo_code, :updated_at
+    def self.from_json(json)
+      set = Set.new
+      set.id = json['id']
+      set.name = json['name']
+      set.series = json['series']
+      set.printed_total = json['printedTotal']
+      set.total = json['total']
+      set.legalities = Legalities.from_json(json['legalities']) if !json['legalities'].nil?
+      set.ptcgo_code = json['ptcgoCode']
+      set.release_date = json['releaseDate']
+      set.updated_at = json['updatedAt']
+      set.images = SetImages.from_json(json['images']) if !json['images'].nil?
+
+      set
+    end
 
     # Get the resource string
     #
@@ -36,6 +46,14 @@ module Pokemon
     # @return [Array<Set>] Array of Set objects
     def self.where(args)
       QueryBuilder.new(Set).where(args)
+    end
+
+    # Adds a q parameter (query parameter) to the hash of query parameters
+    #
+    # @param query_value [String] the query value
+    # @return [Array<Set>] Array of Set objects
+    def self.query(query_value)
+      QueryBuilder.new(Set).query(query_value)
     end
   end
 end

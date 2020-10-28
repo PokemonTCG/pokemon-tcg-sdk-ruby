@@ -8,24 +8,24 @@ class CardTest < Minitest::Test
 
       assert_equal 'xy7-57', card.id
       assert_equal 'Giratina-EX', card.name
-      assert_equal 487, card.national_pokedex_number
-      assert_equal 'https://images.pokemontcg.io/xy7/57.png', card.image_url
-      assert_equal 'https://images.pokemontcg.io/xy7/57_hires.png', card.image_url_hi_res
-      assert_equal 'EX', card.subtype
+      assert_equal [487], card.national_pokedex_numbers
+      assert_equal 'https://images.pokemontcg.io/xy7/57.png', card.images.small
+      assert_equal 'https://images.pokemontcg.io/xy7/57_hires.png', card.images.large
+      assert_equal ['Basic', 'EX'], card.subtypes
       assert_equal 'Pokémon', card.supertype
-      assert_equal 'Renegade Pulse', card.ability.name
-      assert_equal "Prevent all effects of attacks, including damage, done to this Pokémon by your opponent's Mega Evolution Pokémon.", card.ability.text
-      assert_equal 'Ability', card.ability.type
-      assert_equal "170", card.hp
+      assert_equal 'Renegade Pulse', card.abilities.first.name
+      assert_equal "Prevent all effects of attacks, including damage, done to this Pokémon by your opponent's Mega Evolution Pokémon.", card.abilities.first.text
+      assert_equal 'Ability', card.abilities.first.type
+      assert_equal 170, card.hp
       assert_equal ["Colorless","Colorless","Colorless"], card.retreat_cost
       assert_equal 3, card.converted_retreat_cost
       assert_equal "57", card.number
       assert_equal "PLANETA", card.artist
       assert_equal "Rare Holo EX", card.rarity
-      assert_equal "XY", card.series
-      assert_equal "Ancient Origins", card.set
-      assert_equal "xy7", card.set_code
-      assert_equal ["When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."], card.text
+      assert_equal "XY", card.set.series
+      assert_equal "Ancient Origins", card.set.name
+      assert_equal "xy7", card.set.id
+      assert_equal ["When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."], card.rules
       assert_equal ["Dragon"], card.types
       assert card.attacks.any? {|attack| attack.cost == ["Grass","Psychic","Colorless","Colorless"] &&
                                          attack.name == "Chaos Wheel" &&
@@ -58,21 +58,21 @@ class CardTest < Minitest::Test
 
   def test_all_returns_cards
     VCR.use_cassette('all_filtered') do
-      cards = Pokemon::Card.where(supertype: 'pokemon', subtype: 'basic', set: 'generations')
+      cards = Pokemon::Card.query('supertype:pokemon subtypes:basic set.name:generations')
 
       card = cards[0]
       assert_equal 'Pokémon', card.supertype
-      assert_equal 'Basic', card.subtype
-      assert_equal 'Generations', card.set
+      assert card.subtypes.include? 'Basic'
+      assert_equal 'Generations', card.set.name
     end
   end
   
   def test_all_returns_all_cards
     VCR.use_cassette('all_cards') do
-      stub_request(:any, "https://api.pokemontcg.io/v1/cards").
+      stub_request(:any, "https://beta.pokemontcg.io/v2/cards").
         to_return(:body => File.new('test/responses/sample_cards.json'), :status => 200, :headers => {"Content-Type"=> "application/json"})
       
-      stub_request(:any, "https://api.pokemontcg.io/v1/cards?page=2").
+      stub_request(:any, "https://beta.pokemontcg.io/v2/cards?page=2").
         to_return(:body => File.new('test/responses/no_cards.json'), :status => 200, :headers => {"Content-Type"=> "application/json"})
         
       cards = Pokemon::Card.all
