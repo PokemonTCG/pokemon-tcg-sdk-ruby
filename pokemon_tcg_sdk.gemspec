@@ -17,17 +17,17 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.12"
-  spec.add_development_dependency "rake", "~> 11.2"
-  spec.add_development_dependency "minitest", "~> 5.9"
-  spec.add_development_dependency "vcr", "~> 3.0"
-  spec.add_development_dependency "webmock", "~> 2.1"
-  spec.add_development_dependency "simplecov", "~> 0.14"
-  spec.add_development_dependency "codeclimate-test-reporter", "~> 0.6"
+  spec.add_development_dependency "bundler", "~> 2.1.4"
+  spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "minitest", "~> 5.14.2"
+  spec.add_development_dependency "vcr", "~> 6.0"
+  spec.add_development_dependency "webmock", "~> 3.9"
+  spec.add_development_dependency "simplecov", "~> 0.13"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 1.0.9"
 
-  spec.add_dependency "roar", "~> 1.0"
-  spec.add_dependency "json", "~> 2.0"
-  spec.add_dependency "multi_json", "~> 1.12"
-  spec.add_dependency "multi_xml", "~> 0.5"
-  spec.add_dependency "faraday_middleware", "~> 0.10"
+  spec.add_dependency "roar", "~> 1.1"
+  spec.add_dependency "json", "~> 2.3"
+  spec.add_dependency "multi_json", "~> 1.15"
+  spec.add_dependency "multi_xml", "~> 0.6"
+  spec.add_dependency "faraday_middleware", "~> 1.0"
 end
