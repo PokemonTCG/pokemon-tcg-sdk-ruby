@@ -1,10 +1,14 @@
-require_relative 'representers/ability_representer'
-
 module Pokemon
   class Ability
-    include Roar::JSON
-    include AbilityRepresenter
-  
     attr_accessor :name, :text, :type
+
+    def self.from_json(json)
+      ability = Ability.new
+      ability.name = json['name']
+      ability.text = json['text']
+      ability.type = json['type']
+
+      ability
+    end
   end
 end

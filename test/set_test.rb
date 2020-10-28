@@ -5,13 +5,12 @@ class SetTest < Minitest::Test
     VCR.use_cassette('one_set') do
       set = Pokemon::Set.find('g1')
       
-      assert_equal 'g1', set.code
+      assert_equal 'g1', set.id
       assert_equal 'Generations', set.name
       assert_equal 'XY', set.series
-      assert_equal 115, set.total_cards
       assert_equal "02/22/2016", set.release_date
-      assert_equal "https://images.pokemontcg.io/g1/symbol.png", set.symbol_url
-      assert_equal "https://images.pokemontcg.io/g1/logo.png", set.logo_url
+      assert_equal "https://images.pokemontcg.io/g1/symbol.png", set.images.symbol
+      assert_equal "https://images.pokemontcg.io/g1/logo.png", set.images.logo
       assert_equal 'GEN', set.ptcgo_code
     end
   end
@@ -34,9 +33,9 @@ class SetTest < Minitest::Test
   
   def test_where_filters_on_cards
     VCR.use_cassette('filtered_sets') do
-      sets = Pokemon::Set.where(standardLegal: true)
+      sets = Pokemon::Set.query('legalities.standard:legal')
       
-      assert_equal true, sets[0].standard_legal
+      assert_equal 'Legal', sets[0].legalities.standard
     end
   end
 end
