@@ -14,6 +14,7 @@ require "pokemon_tcg_sdk/resistance"
 require "pokemon_tcg_sdk/legalities"
 require "pokemon_tcg_sdk/card_images"
 require "pokemon_tcg_sdk/set_images"
+require "pokemon_tcg_sdk/tcgplayer"
 
 module Pokemon
   API_URL = 'https://beta.pokemontcg.io'
