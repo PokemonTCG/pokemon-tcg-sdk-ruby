@@ -10,8 +10,3 @@ Rake::TestTask.new do |t|
   t.test_files = FileList['test/*_test.rb']
   t.verbose = true
 end
-
-task :card do
-  card = Pokemon::Card.find('xy10-117')
-  puts card.name
-end
