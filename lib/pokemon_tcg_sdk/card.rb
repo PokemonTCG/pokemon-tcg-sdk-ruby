@@ -16,7 +16,7 @@ module Pokemon
       card.evolves_from = json['evolvesFrom']
       card.evolves_to = json['evolvesTo']
       card.rules = json['rules']
-      card.ancient_trait = json['ancientTrait']
+      card.ancient_trait = AncientTrait.from_json(json['ancientTrait']) if !json['ancientTrait'].nil?
       card.abilities = json['abilities'].map {|ability_json| Ability.from_json(ability_json)} if !json['abilities'].nil?
       card.attacks = json['attacks'].map {|attack_json| Attack.from_json(attack_json)} if !json['attacks'].nil?
       card.weaknesses = json['weaknesses'].map {|weakness_json| Weakness.from_json(weakness_json)} if !json['weaknesses'].nil?
