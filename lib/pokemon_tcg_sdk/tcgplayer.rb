@@ -5,7 +5,7 @@ module Pokemon
     def self.from_json(json)
       tcgplayer = Tcgplayer.new
       tcgplayer.url = json['url']
-      tcgplayer.prices = TcgPlayerPrices.from_json(json['prices'])
+      tcgplayer.prices = TcgPlayerPrices.from_json(json['prices']) if !json['prices'].nil?
 
       tcgplayer
     end
