@@ -47,13 +47,5 @@ module Pokemon
     def self.where(args)
       QueryBuilder.new(Set).where(args)
     end
-
-    # Adds a q parameter (query parameter) to the hash of query parameters
-    #
-    # @param query_value [String] the query value
-    # @return [Array<Set>] Array of Set objects
-    def self.query(query_value)
-      QueryBuilder.new(Set).query(query_value)
-    end
   end
 end

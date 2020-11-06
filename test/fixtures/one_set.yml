@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://beta.pokemontcg.io/v2/sets/g1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 06 Nov 2020 06:00:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d20451a3b97a85cb6fed4eada402fd57e1604642412; expires=Sun, 06-Dec-20
+        06:00:12 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"9f107d067ff0b4883af0e76e26eb5f9b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cc53619b-57cd-4418-82b3-b4566a40b68e
+      X-Runtime:
+      - '0.036571'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 063dbd309000002ffabb04a000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=DVgjMbrQXjVOaS6u3TNO6GD5u0S%2BF0K4AUxSWhnmUTnT4fAZgzmertWUKwGTDsA73oj0J5jBTpNvYVw%2F6FeiVudZPW7FHgX4t9qRuWuykQV4g0w%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5edc97c748a82ffa-ORD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"id":"g1","name":"Generations","series":"XY","printedTotal":115,"total":115,"legalities":{"unlimited":"Legal","expanded":"Legal"},"ptcgoCode":"GEN","releaseDate":"2016/02/22","updatedAt":"2020/08/14
+        09:35:00","images":{"symbol":"https://images.pokemontcg.io/g1/symbol.png","logo":"https://images.pokemontcg.io/g1/logo.png"}}}'
+  recorded_at: Fri, 06 Nov 2020 06:00:12 GMT
+recorded_with: VCR 6.0.0

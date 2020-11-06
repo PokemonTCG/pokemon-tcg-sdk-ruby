@@ -16,7 +16,7 @@ module Pokemon
     
     def self.from_json(json)
       price = TcgPlayerPrices.new
-      price.normal = TcgPlayerPriceValues.from_json(json['normal']) if !json['normal'].nil?
+      price.normal = TcgPlayerPriceValues.from_json(json['normal']) if json.key? 'normal'
       price.holofoil = TcgPlayerPriceValues.from_json(json['holofoil']) if !json['holofoil'].nil?
       price.reverse_holofoil = TcgPlayerPriceValues.from_json(json['reverseHolofoil']) if !json['reverseHolofoil'].nil?
       price.first_edition_holofoil = TcgPlayerPriceValues.from_json(json['1stEditionHolofoil']) if !json['1stEditionHolofoil'].nil?

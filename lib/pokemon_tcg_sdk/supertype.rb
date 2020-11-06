@@ -6,7 +6,7 @@ module Pokemon
     #
     # @return [Array<String>]  All supertypes
     def self.all
-      RestClient.get('supertypes').body['data']
+      RestClient.get('supertypes')['data']
     end
   end
 end

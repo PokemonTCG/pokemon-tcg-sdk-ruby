@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://beta.pokemontcg.io/v2/types
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 06 Nov 2020 06:00:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1c9945fa063173a80dc42095937a7b731604642414; expires=Sun, 06-Dec-20
+        06:00:14 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"3bcb404d5c24131938d544716aa76e0f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e8f337fe-7c3f-4377-a430-569d048b1bdf
+      X-Runtime:
+      - '0.054008'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 063dbd382e00008835bf1a7000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=5kktgIoKh%2Bj0FLHrql6KcR6st%2Fvp1KXvZxQZmkGq4%2F2LqaWTOcmiQ85LiDXxidcBp6kmku%2BHwnkaUKRtC%2BTRURc5Ez%2Fp8MDpclSpnMxON6Gvbwk%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5edc97d37efa8835-ORD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":["Colorless","Darkness","Dragon","Fairy","Fighting","Fire","Grass","Lightning","Metal","Psychic","Water"]}'
+  recorded_at: Fri, 06 Nov 2020 06:00:14 GMT
+recorded_with: VCR 6.0.0

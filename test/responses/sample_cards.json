@@ -80,26 +80,20 @@
         },
         "tcgplayer": {
           "url": "http://prices.pokemontcg.io/tcgplayer/hgss4-19",
-          "prices": [
-            {
-              "normal": {
-                "low": 0.35,
-                "mid": 0.49,
-                "high": 1.5,
-                "market": 0.52,
-                "directLow": null
-              }
+          "prices": {
+            "normal": {
+              "low": 0.35,
+              "mid": 0.49,
+              "high": 1.5,
+              "market": 0.52
             },
-            {
-              "reverseHolofoil": {
-                "low": 0.43,
-                "mid": 0.8,
-                "high": 1.49,
-                "market": 0.73,
-                "directLow": null
-              }
+            "reverseHolofoil": {
+              "low": 0.43,
+              "mid": 0.8,
+              "high": 1.49,
+              "market": 0.73
             }
-          ]
+          }
         }
       },
       {
@@ -179,27 +173,21 @@
           "large": "https://images.pokemontcg.io/hgss4/27_hires.png"
         },
         "tcgplayer": {
-          "url": "http://prices.pokemontcg.io/tcgplayer/hgss4-27",
-          "prices": [
-            {
-              "normal": {
-                "low": 0.36,
-                "mid": 0.5,
-                "high": 1.5,
-                "market": 0.8,
-                "directLow": null
-              }
+          "url": "http://prices.pokemontcg.io/tcgplayer/hgss4-19",
+          "prices": {
+            "normal": {
+              "low": 0.35,
+              "mid": 0.49,
+              "high": 1.5,
+              "market": 0.52
             },
-            {
-              "reverseHolofoil": {
-                "low": 0.29,
-                "mid": 0.75,
-                "high": 1.22,
-                "market": 0.62,
-                "directLow": 0.75
-              }
+            "reverseHolofoil": {
+              "low": 0.43,
+              "mid": 0.8,
+              "high": 1.49,
+              "market": 0.73
             }
-          ]
+          }
         }
       }
     ],

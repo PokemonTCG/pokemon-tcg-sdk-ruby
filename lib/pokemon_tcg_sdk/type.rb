@@ -6,7 +6,7 @@ module Pokemon
     #
     # @return [Array<String>]  All types
     def self.all
-      RestClient.get('types').body['data']
+      RestClient.get('types')['data']
     end
   end
 end

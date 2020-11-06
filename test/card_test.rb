@@ -58,7 +58,7 @@ class CardTest < Minitest::Test
 
   def test_all_returns_cards
     VCR.use_cassette('all_filtered') do
-      cards = Pokemon::Card.query('supertype:pokemon subtypes:basic set.name:generations')
+      cards = Pokemon::Card.where(q: 'supertype:pokemon subtypes:basic set.name:generations')
 
       card = cards[0]
       assert_equal 'Pokémon', card.supertype

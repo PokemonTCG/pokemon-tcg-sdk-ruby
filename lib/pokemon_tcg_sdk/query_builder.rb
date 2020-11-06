@@ -1,4 +1,5 @@
 require_relative 'rest_client'
+require 'json'
 
 module Pokemon
   class QueryBuilder
@@ -18,17 +19,6 @@ module Pokemon
       @query.merge!(args)
       self.all
     end
-
-    # Adds a q parameter (the query parameter) to the hash of query parameters
-    #
-    # @param query_value [String] the query value
-    # @return [QueryBuilder] the QueryBuilder
-    def query(query_value)
-      hash = Hash.new
-      hash[:q] = query_value
-      @query.merge! hash
-      self.all
-    end
     
     # Find a single resource by the resource id
     #
@@ -36,11 +26,7 @@ module Pokemon
     # @return [Object] the Type object response
     def find(id)
       response = RestClient.get("#{@type.Resource}/#{id}")
-      if response.body['data'].nil?
-        raise ArgumentError, 'Resource not found'
-      end
-      
-      @type.from_json response.body['data']
+      @type.from_json response['data']
     end
     
     # Get all resources from a query by paging through data
@@ -58,7 +44,7 @@ module Pokemon
       
       while true
         response = RestClient.get(@type.Resource, @query)
-        data = response.body['data']    
+        data = response['data'] 
         if !data.nil? && data.any?
           data.each {|item| list << @type.from_json(item)}
           

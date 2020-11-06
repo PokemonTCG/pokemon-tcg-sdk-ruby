@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://beta.pokemontcg.io/v2/cards/zzzz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      X-Api-Key:
+      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 06 Nov 2020 06:00:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfb151c7a9514a8ae3ab94e5f1644aaf31604642409; expires=Sun, 06-Dec-20
+        06:00:09 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5af7345b-22e9-4ef5-9d82-f371096eb4ba
+      X-Runtime:
+      - '0.037672'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 063dbd24270000f22628134000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=OIEN8E4JIqRGvlwuq248bc377c0ePaOtRdcrOqPACHOfUm%2Bd3G3bOpArxcFa0h3wmQsJDsMihlUZgcKfzw9H5ZR3S8nRL0dJkC6j0lg%2FxGyAVPw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5edc97b37b36f226-ORD
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"message":"The requested resource was not found.","code":404}}'
+  recorded_at: Fri, 06 Nov 2020 06:00:09 GMT
+recorded_with: VCR 6.0.0
