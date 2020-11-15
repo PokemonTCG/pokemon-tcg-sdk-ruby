@@ -23,7 +23,7 @@ module Pokemon
       card.resistances = json['resistances'].map {|resistance_json| Resistance.from_json(resistance_json)} if !json['resistances'].nil?
       card.retreat_cost = json['retreatCost']
       card.converted_retreat_cost = json['convertedRetreatCost']
-      card.set = Set.from_json(json['set'])
+      card.set = Set.from_json(json['set']) if !json['set'].nil?
       card.number = json['number']
       card.artist = json['artist']
       card.rarity = json['rarity']
