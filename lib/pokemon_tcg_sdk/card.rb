@@ -2,7 +2,7 @@ module Pokemon
   class Card
     attr_accessor :id, :name, :supertype, :subtypes, :level, :hp, :types, :evolves_from, :evolves_to, :rules, :ancient_trait,
       :abilities, :attacks, :weaknesses, :resistances, :retreat_cost, :converted_retreat_cost, :set, :number, :artist, :rarity, :national_pokedex_numbers,
-      :legalities, :tcgplayer, :images
+      :legalities, :tcgplayer, :images, :flavor_text
 
     def self.from_json(json)
       card = Card.new
@@ -27,6 +27,7 @@ module Pokemon
       card.number = json['number']
       card.artist = json['artist']
       card.rarity = json['rarity']
+      card.flavor_text = json['flavorText']
       card.national_pokedex_numbers = json['nationalPokedexNumbers']
       card.legalities = Legalities.from_json(json['legalities']) if !json['legalities'].nil?
       card.tcgplayer = Tcgplayer.from_json(json['tcgplayer']) if !json['tcgplayer'].nil?

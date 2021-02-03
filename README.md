@@ -78,6 +78,7 @@ To configure your API Key:
     legalities
     tcgplayer
     images
+    flavor_text
 
 #### Set
 
