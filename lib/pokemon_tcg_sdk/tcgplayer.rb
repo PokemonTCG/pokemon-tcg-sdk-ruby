@@ -1,10 +1,11 @@
 module Pokemon
   class Tcgplayer
-    attr_accessor :url, :prices
+    attr_accessor :url, :prices, :updated_at
 
     def self.from_json(json)
       tcgplayer = Tcgplayer.new
       tcgplayer.url = json['url']
+      tcgplayer.updated_at = json['updatedAt']
       tcgplayer.prices = TcgPlayerPrices.from_json(json['prices']) if !json['prices'].nil?
 
       tcgplayer

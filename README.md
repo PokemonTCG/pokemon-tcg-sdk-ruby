@@ -6,6 +6,8 @@
 [![Code Climate](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/badges/gpa.svg)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ee9d7d6ee5f8276729bc/test_coverage)](https://codeclimate.com/github/PokemonTCG/pokemon-tcg-sdk-ruby/test_coverage)
 
+### Now supporting Version 2 of the Pokémon TCG API!
+
 This is the Pokémon TCG SDK Ruby implementation. It is a wrapper around the Pokémon TCG API of [pokemontcg.io](http://pokemontcg.io/).
 
 ## Installation
@@ -24,10 +26,10 @@ Or install it yourself as:
 
 ## Usage
 
-To change the API version (currently defaults to version 1)
+To configure your API Key:
 
     Pokemon.configure do |config|
-      config.api_version = 2
+      config.api_key = "xxxxxxxxx"
     end
 
 ### Classes
@@ -40,7 +42,13 @@ To change the API version (currently defaults to version 1)
     Ability
     AncientTrait
     Attack
-    TypeValue
+    Resistance
+    Weakness
+    Legalities
+    Rarity
+    SetImages
+    CardImages
+    Tcgplayer
 
 ### Properties Per Class
 
@@ -48,41 +56,41 @@ To change the API version (currently defaults to version 1)
 
     id
     name
-    national_pokedex_number
-    image_url
-    image_url_hi_res
-    subtype
     supertype
-    ability
-    ancient_trait
+    subtypes
+    level
     hp
+    types
+    evolves_from
+    evolves_to
+    rules
+    ancient_trait
+    abilities
+    weaknesses
+    resistances
+    retreat_cost
+    converted_retreat_cost
+    set
     number
     artist
     rarity
-    series
-    set
-    set_code
-    retreat_cost
-    converted_retreat_cost
-    text
-    types
-    attacks
-    weaknesses
-    resistances
-    evolves_from
+    national_pokedex_numbers
+    legalities
+    tcgplayer
+    images
 
 #### Set
 
-    code
+    id
     name
     series
-    total_cards
-    symbol_url
-    logo_url
-    standard_legal
-    expanded_legal
+    printedTotal
+    total
+    legalities
+    ptcgo_code
     release_date
     updated_at
+    images
 
 #### Ability
 
@@ -103,10 +111,25 @@ To change the API version (currently defaults to version 1)
     damage
     converted_energy_cost
 
-#### TypeValue
+#### Weakness
 
     type
     value
+
+#### Resistance
+
+    type
+    value
+
+#### CardImages
+
+    small
+    large
+
+#### SetImages
+
+    logo
+    symbol
 
 ### Functions Available
 
@@ -116,7 +139,7 @@ To change the API version (currently defaults to version 1)
 
 #### Filter Cards via query parameters
 
-    cards = Pokemon::Card.where(set: 'generations', supertype: 'pokemon')
+    cards = Pokemon::Card.where(q: 'set.name:generations subtypes:mega')
     
 #### Find all cards (will take awhile)
 
@@ -132,7 +155,7 @@ To change the API version (currently defaults to version 1)
     
 #### Filter sets via query parameters
 
-    sets = Pokemon::Set.where(standardLegal: true)
+    sets = Pokemon::Set.where(q: 'legalities.standard:legal')
     
 #### Get all Sets
 
@@ -149,6 +172,10 @@ To change the API version (currently defaults to version 1)
 #### Get all Supertypes
 
     supertypes = Pokemon::Supertype.all
+
+#### Get all Rarities
+
+    supertypes = Pokemon::Rarity.all
 
 ## Contributing
 
