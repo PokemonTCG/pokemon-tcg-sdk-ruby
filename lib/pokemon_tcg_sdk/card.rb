@@ -1,3 +1,5 @@
+require 'erb'
+
 module Pokemon
   class Card
     attr_accessor :id, :name, :supertype, :subtypes, :level, :hp, :types, :evolves_from, :evolves_to, :rules, :ancient_trait,
@@ -47,7 +49,7 @@ module Pokemon
     # @param id [String] the card id
     # @return [Card] the Card object response
     def self.find(id)
-      QueryBuilder.new(Card).find(id)
+      QueryBuilder.new(Card).find(ERB::Util.url_encode(id))
     end
 
     # Get all cards from a query by paging through data
