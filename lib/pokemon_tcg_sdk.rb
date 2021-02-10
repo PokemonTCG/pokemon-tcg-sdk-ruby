@@ -19,7 +19,7 @@ require "pokemon_tcg_sdk/ancient_trait"
 require "pokemon_tcg_sdk/rarity"
 
 module Pokemon
-  API_URL = 'https://beta.pokemontcg.io'
+  API_URL = 'https://api.pokemontcg.io'
 
   class << self
     attr_writer :configuration
