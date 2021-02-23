@@ -1,7 +1,7 @@
 # Pokémon TCG SDK
 
 [![Gem Version](https://badge.fury.io/rb/pokemon_tcg_sdk.svg)](https://badge.fury.io/rb/pokemon_tcg_sdk)
-[![Build Status](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby.svg?branch=master)](https://travis-ci.org/PokemonTCG/pokemon-tcg-sdk-ruby)
+![Build Status](https://github.com/PokemonTCG/pokemon-tcg-sdk-ruby/actions/workflows/test.yml/badge.svg)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PokemonTCG/pokemon-tcg-sdk-ruby.svg)](https://gemnasium.com/github.com/PokemonTCG/pokemon-tcg-sdk-ruby)
 
 ### Now supporting Version 2 of the Pokémon TCG API!
