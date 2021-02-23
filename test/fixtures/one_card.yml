@@ -2,17 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://beta.pokemontcg.io/v2/cards/xy7-57
+    uri: https://api.pokemontcg.io/v2/cards/xy7-57
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Content-Type:
       - application/json
-      X-Api-Key:
-      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
       User-Agent:
-      - Faraday v1.1.0
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Nov 2020 06:00:09 GMT
+      - Tue, 23 Feb 2021 21:46:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=db409bd382a084bc2d410c9332b6442c51604642409; expires=Sun, 06-Dec-20
-        06:00:09 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d0ef006aaceb333f24293785613b4437c1614116801; expires=Thu, 25-Mar-21
+        21:46:41 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept-Encoding
       - Origin
@@ -49,30 +47,30 @@ http_interactions:
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Etag:
-      - W/"097e0877a933f6aaf17d8d6af5bfb8de"
+      - W/"b2dfd335526709a73e3734c1f6846b18"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 87f87996-9a29-479e-83df-9bcaacff0337
+      - ddaf2723-4dc3-4316-9a40-09c5cfcae33d
       X-Runtime:
-      - '0.037660'
+      - '0.033184'
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 063dbd238a000003cce9a6a000000001
+      - '087274e58d00007e5b87230000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Jx8t7FhWRZcBva9n9VcXUKDxZFwquEfsoIqAPa9uddZxx7H9xnY2U8AZ0evXwFow6JIdt7diC5KTKpMd0o7sxa4f2F2x7vlwBNhHkimoxFtieUc%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=83E71rIzaOFoLQHsiZFsEdP6jDPXcCBUwroKZWZOO8%2Bl76KWJ5wWlx8lV34G8CXnm4C99rmKFaoa70YUPOJz%2BnrKCmjhM%2FwaKpEH4Df6OgmpdQ%3D%3D"}],"max_age":604800,"group":"cf-nel"}'
       Nel:
-      - '{"report_to":"cf-nel","max_age":604800}'
+      - '{"max_age":604800,"report_to":"cf-nel"}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 5edc97b27d3603cc-ORD
+      - 6264241c1de27e5b-DTW
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJkYXRhIjp7ImlkIjoieHk3LTU3IiwibmFtZSI6IkdpcmF0aW5hLUVYIiwic3VwZXJ0eXBlIjoiUG9rw6ltb24iLCJzdWJ0eXBlcyI6WyJCYXNpYyIsIkVYIl0sImhwIjoxNzAsInR5cGVzIjpbIkRyYWdvbiJdLCJydWxlcyI6WyJXaGVuIGEgUG9rw6ltb24tRVggaGFzIGJlZW4gS25vY2tlZCBPdXQsIHlvdXIgb3Bwb25lbnQgdGFrZXMgMiBQcml6ZSBjYXJkcy4iXSwiYWJpbGl0aWVzIjpbeyJuYW1lIjoiUmVuZWdhZGUgUHVsc2UiLCJ0ZXh0IjoiUHJldmVudCBhbGwgZWZmZWN0cyBvZiBhdHRhY2tzLCBpbmNsdWRpbmcgZGFtYWdlLCBkb25lIHRvIHRoaXMgUG9rw6ltb24gYnkgeW91ciBvcHBvbmVudCdzIE1lZ2EgRXZvbHV0aW9uIFBva8OpbW9uLiIsInR5cGUiOiJBYmlsaXR5In1dLCJhdHRhY2tzIjpbeyJuYW1lIjoiQ2hhb3MgV2hlZWwiLCJjb3N0IjpbIkdyYXNzIiwiUHN5Y2hpYyIsIkNvbG9ybGVzcyIsIkNvbG9ybGVzcyJdLCJjb252ZXJ0ZWRFbmVyZ3lDb3N0Ijo0LCJkYW1hZ2UiOiIxMDAiLCJ0ZXh0IjoiWW91ciBvcHBvbmVudCBjYW4ndCBwbGF5IGFueSBQb2vDqW1vbiBUb29sLCBTcGVjaWFsIEVuZXJneSwgb3IgU3RhZGl1bSBjYXJkcyBmcm9tIGhpcyBvciBoZXIgaGFuZCBkdXJpbmcgaGlzIG9yIGhlciBuZXh0IHR1cm4uIn1dLCJ3ZWFrbmVzc2VzIjpbeyJ0eXBlIjoiRmFpcnkiLCJ2YWx1ZSI6IsOXMiJ9XSwicmV0cmVhdENvc3QiOlsiQ29sb3JsZXNzIiwiQ29sb3JsZXNzIiwiQ29sb3JsZXNzIl0sImNvbnZlcnRlZFJldHJlYXRDb3N0IjozLCJzZXQiOnsiaWQiOiJ4eTciLCJuYW1lIjoiQW5jaWVudCBPcmlnaW5zIiwic2VyaWVzIjoiWFkiLCJwcmludGVkVG90YWwiOjk4LCJ0b3RhbCI6MTAwLCJsZWdhbGl0aWVzIjp7InVubGltaXRlZCI6IkxlZ2FsIiwiZXhwYW5kZWQiOiJMZWdhbCJ9LCJwdGNnb0NvZGUiOiJBT1IiLCJyZWxlYXNlRGF0ZSI6IjIwMTUvMDgvMTIiLCJ1cGRhdGVkQXQiOiIyMDIwLzA4LzE0IDA5OjM1OjAwIiwiaW1hZ2VzIjp7InN5bWJvbCI6Imh0dHBzOi8vaW1hZ2VzLnBva2Vtb250Y2cuaW8veHk3L3N5bWJvbC5wbmciLCJsb2dvIjoiaHR0cHM6Ly9pbWFnZXMucG9rZW1vbnRjZy5pby94eTcvbG9nby5wbmcifX0sIm51bWJlciI6IjU3IiwiYXJ0aXN0IjoiUExBTkVUQSIsInJhcml0eSI6IlJhcmUgSG9sbyBFWCIsIm5hdGlvbmFsUG9rZWRleE51bWJlcnMiOls0ODddLCJsZWdhbGl0aWVzIjp7InVubGltaXRlZCI6IkxlZ2FsIiwiZXhwYW5kZWQiOiJMZWdhbCJ9LCJpbWFnZXMiOnsic21hbGwiOiJodHRwczovL2ltYWdlcy5wb2tlbW9udGNnLmlvL3h5Ny81Ny5wbmciLCJsYXJnZSI6Imh0dHBzOi8vaW1hZ2VzLnBva2Vtb250Y2cuaW8veHk3LzU3X2hpcmVzLnBuZyJ9LCJ0Y2dwbGF5ZXIiOnsidXJsIjoiaHR0cDovL3ByaWNlcy5wb2tlbW9udGNnLmlvL3RjZ3BsYXllci94eTctNTciLCJwcmljZXMiOnsiaG9sb2ZvaWwiOnsibG93IjoyLjAsIm1pZCI6My4xNCwiaGlnaCI6MTQuOSwibWFya2V0IjozLjEzLCJkaXJlY3RMb3ciOjIuNjh9fX19fQ==
-  recorded_at: Fri, 06 Nov 2020 06:00:09 GMT
+        eyJkYXRhIjp7ImlkIjoieHk3LTU3IiwibmFtZSI6IkdpcmF0aW5hLUVYIiwic3VwZXJ0eXBlIjoiUG9rw6ltb24iLCJzdWJ0eXBlcyI6WyJCYXNpYyIsIkVYIl0sImhwIjoiMTcwIiwidHlwZXMiOlsiRHJhZ29uIl0sInJ1bGVzIjpbIlBva8OpbW9uLUVYIHJ1bGU6IFdoZW4gYSBQb2vDqW1vbi1FWCBoYXMgYmVlbiBLbm9ja2VkIE91dCwgeW91ciBvcHBvbmVudCB0YWtlcyAyIFByaXplIGNhcmRzLiJdLCJhYmlsaXRpZXMiOlt7Im5hbWUiOiJSZW5lZ2FkZSBQdWxzZSIsInRleHQiOiJQcmV2ZW50IGFsbCBlZmZlY3RzIG9mIGF0dGFja3MsIGluY2x1ZGluZyBkYW1hZ2UsIGRvbmUgdG8gdGhpcyBQb2vDqW1vbiBieSB5b3VyIG9wcG9uZW50J3MgTWVnYSBFdm9sdXRpb24gUG9rw6ltb24uIiwidHlwZSI6IkFiaWxpdHkifV0sImF0dGFja3MiOlt7Im5hbWUiOiJDaGFvcyBXaGVlbCIsImNvc3QiOlsiR3Jhc3MiLCJQc3ljaGljIiwiQ29sb3JsZXNzIiwiQ29sb3JsZXNzIl0sImNvbnZlcnRlZEVuZXJneUNvc3QiOjQsImRhbWFnZSI6IjEwMCIsInRleHQiOiJZb3VyIG9wcG9uZW50IGNhbid0IHBsYXkgYW55IFBva8OpbW9uIFRvb2wsIFNwZWNpYWwgRW5lcmd5LCBvciBTdGFkaXVtIGNhcmRzIGZyb20gaGlzIG9yIGhlciBoYW5kIGR1cmluZyBoaXMgb3IgaGVyIG5leHQgdHVybi4ifV0sIndlYWtuZXNzZXMiOlt7InR5cGUiOiJGYWlyeSIsInZhbHVlIjoiw5cyIn1dLCJyZXRyZWF0Q29zdCI6WyJDb2xvcmxlc3MiLCJDb2xvcmxlc3MiLCJDb2xvcmxlc3MiXSwiY29udmVydGVkUmV0cmVhdENvc3QiOjMsInNldCI6eyJpZCI6Inh5NyIsIm5hbWUiOiJBbmNpZW50IE9yaWdpbnMiLCJzZXJpZXMiOiJYWSIsInByaW50ZWRUb3RhbCI6OTgsInRvdGFsIjoxMDAsImxlZ2FsaXRpZXMiOnsidW5saW1pdGVkIjoiTGVnYWwiLCJleHBhbmRlZCI6IkxlZ2FsIn0sInB0Y2dvQ29kZSI6IkFPUiIsInJlbGVhc2VEYXRlIjoiMjAxNS8wOC8xMiIsInVwZGF0ZWRBdCI6IjIwMjAvMDgvMTQgMDk6MzU6MDAiLCJpbWFnZXMiOnsic3ltYm9sIjoiaHR0cHM6Ly9pbWFnZXMucG9rZW1vbnRjZy5pby94eTcvc3ltYm9sLnBuZyIsImxvZ28iOiJodHRwczovL2ltYWdlcy5wb2tlbW9udGNnLmlvL3h5Ny9sb2dvLnBuZyJ9fSwibnVtYmVyIjoiNTciLCJhcnRpc3QiOiJQTEFORVRBIiwicmFyaXR5IjoiUmFyZSBIb2xvIEVYIiwibmF0aW9uYWxQb2tlZGV4TnVtYmVycyI6WzQ4N10sImxlZ2FsaXRpZXMiOnsidW5saW1pdGVkIjoiTGVnYWwiLCJleHBhbmRlZCI6IkxlZ2FsIn0sImltYWdlcyI6eyJzbWFsbCI6Imh0dHBzOi8vaW1hZ2VzLnBva2Vtb250Y2cuaW8veHk3LzU3LnBuZyIsImxhcmdlIjoiaHR0cHM6Ly9pbWFnZXMucG9rZW1vbnRjZy5pby94eTcvNTdfaGlyZXMucG5nIn0sInRjZ3BsYXllciI6eyJ1cmwiOiJodHRwczovL3ByaWNlcy5wb2tlbW9udGNnLmlvL3RjZ3BsYXllci94eTctNTciLCJ1cGRhdGVkQXQiOiIyMDIxLzAyLzIzIiwicHJpY2VzIjp7ImhvbG9mb2lsIjp7ImxvdyI6My4yNSwibWlkIjo2LjAsImhpZ2giOjE0LjksIm1hcmtldCI6NC42NSwiZGlyZWN0TG93IjoxNC45fX19fX0=
+  recorded_at: Tue, 23 Feb 2021 21:46:41 GMT
 recorded_with: VCR 6.0.0

@@ -2,17 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://beta.pokemontcg.io/v2/sets?q=legalities.standard:legal
+    uri: https://api.pokemontcg.io/v2/sets?q=legalities.standard:legal
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Content-Type:
       - application/json
-      X-Api-Key:
-      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
       User-Agent:
-      - Faraday v1.1.0
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Nov 2020 06:00:12 GMT
+      - Tue, 23 Feb 2021 21:46:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dcf4fed0c08faba4e643d13288f6b852f1604642412; expires=Sun, 06-Dec-20
-        06:00:12 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d08efc950109c4c6f974e58fb273e19a21614116803; expires=Thu, 25-Mar-21
+        21:46:43 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept-Encoding
       - Origin
@@ -49,78 +47,70 @@ http_interactions:
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Etag:
-      - W/"884f5ea57def3857d43c82ac227f4c8b"
+      - W/"9473b48722c7b94d485e8ddcb75c49e9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 71963e53-1185-427b-bfd7-5e274de4b1c8
+      - 870db679-8c22-4ba1-8e70-a869eb936ce6
       X-Runtime:
-      - '0.057875'
+      - '0.050294'
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 063dbd2e5d0000e2167c0d5000000001
+      - '087274ecde000026dbb0ae1000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=eY%2B3foDZDF7PcKL8OusH03dvsvEIbEZzXURUUzIJhMpNVkOattedgRhLI7kh7rxi6z4o8Rvqkn8l6YW0uze4gsKvAat%2BYJntXNrRL9mPRJxCwV0%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=O7N4q6NSi2QP%2B1oQvKm9JmM3noyTKjmSkqPdNZztYSYN5qbsQFaV0O9E3K6lQCWV%2BDKEnPu970Bvgt%2Bj29jmJk8U1AnB3Tkb1FRfvvMWiuhWZQ%3D%3D"}],"max_age":604800,"group":"cf-nel"}'
       Nel:
-      - '{"report_to":"cf-nel","max_age":604800}'
+      - '{"max_age":604800,"report_to":"cf-nel"}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 5edc97c3c8a3e216-ORD
+      - 62642427ca3226db-MSP
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[{"id":"sm75","name":"Dragon Majesty","series":"Sun \u0026
-        Moon","printedTotal":70,"total":78,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"DRM","releaseDate":"2018/09/07","updatedAt":"2018/10/01
-        21:54:00","images":{"symbol":"https://images.pokemontcg.io/sm75/symbol.png","logo":"https://images.pokemontcg.io/sm75/logo.png"}},{"id":"sm115","name":"Hidden
-        Fates","series":"Sun \u0026 Moon","printedTotal":68,"total":69,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"HIF","releaseDate":"2019/08/23","updatedAt":"2019/08/23
-        15:59:00","images":{"symbol":"https://images.pokemontcg.io/sm115/symbol.png","logo":"https://images.pokemontcg.io/sm115/logo.png"}},{"id":"swsh35","name":"Champion''s
-        Path","series":"Sword \u0026 Shield","printedTotal":73,"total":80,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"CPA","releaseDate":"2020/09/25","updatedAt":"2020/10/25
-        13:45:00","images":{"symbol":"https://images.pokemontcg.io/swsh35/symbol.png","logo":"https://images.pokemontcg.io/swsh35/logo.png"}},{"id":"det1","name":"Detective
-        Pikachu","series":"Sun \u0026 Moon","printedTotal":18,"total":18,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"DET","releaseDate":"2019/04/05","updatedAt":"2019/04/25
-        22:26:00","images":{"symbol":"https://images.pokemontcg.io/det1/symbol.png","logo":"https://images.pokemontcg.io/det1/logo.png"}},{"id":"sm7","name":"Celestial
-        Storm","series":"Sun \u0026 Moon","printedTotal":168,"total":168,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"CES","releaseDate":"2018/08/03","updatedAt":"2019/02/19
-        23:25:00","images":{"symbol":"https://images.pokemontcg.io/sm7/symbol.png","logo":"https://images.pokemontcg.io/sm7/logo.png"}},{"id":"sm8","name":"Lost
-        Thunder","series":"Sun \u0026 Moon","printedTotal":214,"total":236,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"LOT","releaseDate":"2018/11/02","updatedAt":"2020/08/14
-        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm8/symbol.png","logo":"https://images.pokemontcg.io/sm8/logo.png"}},{"id":"sm10","name":"Unbroken
-        Bonds","series":"Sun \u0026 Moon","printedTotal":214,"total":234,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"UNB","releaseDate":"2019/05/03","updatedAt":"2020/08/14
-        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm10/symbol.png","logo":"https://images.pokemontcg.io/sm10/logo.png"}},{"id":"sm5","name":"Ultra
-        Prism","series":"Sun \u0026 Moon","printedTotal":156,"total":156,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"UPR","releaseDate":"2018/02/02","updatedAt":"2019/02/19
-        23:25:00","images":{"symbol":"https://images.pokemontcg.io/sm5/symbol.png","logo":"https://images.pokemontcg.io/sm5/logo.png"}},{"id":"smp","name":"SM
-        Black Star Promos","series":"Sun \u0026 Moon","printedTotal":156,"total":156,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"PR-SM","releaseDate":"2017/02/03","updatedAt":"2020/05/01
-        16:06:00","images":{"symbol":"https://images.pokemontcg.io/smp/symbol.png","logo":"https://images.pokemontcg.io/smp/logo.png"}},{"id":"sm6","name":"Forbidden
-        Light","series":"Sun \u0026 Moon","printedTotal":131,"total":146,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"FLI","releaseDate":"2018/05/04","updatedAt":"2019/02/19
-        23:25:00","images":{"symbol":"https://images.pokemontcg.io/sm6/symbol.png","logo":"https://images.pokemontcg.io/sm6/logo.png"}},{"id":"sm12","name":"Cosmic
-        Eclipse","series":"Sun \u0026 Moon","printedTotal":236,"total":271,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"CEC","releaseDate":"2019/11/01","updatedAt":"2020/08/14
-        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm12/symbol.png","logo":"https://images.pokemontcg.io/sm12/logo.png"}},{"id":"swsh1","name":"Sword
-        \u0026 Shield","series":"Sword \u0026 Shield","printedTotal":202,"total":216,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"SSH","releaseDate":"2020/02/07","updatedAt":"2020/08/14
-        09:35:00","images":{"symbol":"https://images.pokemontcg.io/swsh1/symbol.png","logo":"https://images.pokemontcg.io/swsh1/logo.png"}},{"id":"sm11","name":"Unified
-        Minds","series":"Sun \u0026 Moon","printedTotal":236,"total":258,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"UNM","releaseDate":"2019/08/02","updatedAt":"2020/09/25
-        10:09:00","images":{"symbol":"https://images.pokemontcg.io/sm11/symbol.png","logo":"https://images.pokemontcg.io/sm11/logo.png"}},{"id":"swsh3","name":"Darkness
-        Ablaze","series":"Sword \u0026 Shield","printedTotal":189,"total":201,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"DAA","releaseDate":"2020/08/14","updatedAt":"2020/10/25
-        13:45:00","images":{"symbol":"https://images.pokemontcg.io/swsh3/symbol.png","logo":"https://images.pokemontcg.io/swsh3/logo.png"}},{"id":"swsh2","name":"Rebel
-        Clash","series":"Sword \u0026 Shield","printedTotal":192,"total":209,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"RCL","releaseDate":"2020/05/01","updatedAt":"2020/09/25
-        10:09:00","images":{"symbol":"https://images.pokemontcg.io/swsh2/symbol.png","logo":"https://images.pokemontcg.io/swsh2/logo.png"}},{"id":"sm9","name":"Team
+      string: '{"data":[{"id":"smp","name":"SM Black Star Promos","series":"Sun \u0026
+        Moon","printedTotal":156,"total":156,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"PR-SM","releaseDate":"2017/02/03","updatedAt":"2020/05/01
+        16:06:00","images":{"symbol":"https://images.pokemontcg.io/smp/symbol.png","logo":"https://images.pokemontcg.io/smp/logo.png"}},{"id":"sm9","name":"Team
         Up","series":"Sun \u0026 Moon","printedTotal":181,"total":196,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"TEU","releaseDate":"2019/02/01","updatedAt":"2020/08/14
-        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm9/symbol.png","logo":"https://images.pokemontcg.io/sm9/logo.png"}},{"id":"sma","name":"Shiny
+        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm9/symbol.png","logo":"https://images.pokemontcg.io/sm9/logo.png"}},{"id":"det1","name":"Detective
+        Pikachu","series":"Sun \u0026 Moon","printedTotal":18,"total":18,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"DET","releaseDate":"2019/04/05","updatedAt":"2019/04/25
+        22:26:00","images":{"symbol":"https://images.pokemontcg.io/det1/symbol.png","logo":"https://images.pokemontcg.io/det1/logo.png"}},{"id":"sm10","name":"Unbroken
+        Bonds","series":"Sun \u0026 Moon","printedTotal":214,"total":234,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"UNB","releaseDate":"2019/05/03","updatedAt":"2020/08/14
+        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm10/symbol.png","logo":"https://images.pokemontcg.io/sm10/logo.png"}},{"id":"sm11","name":"Unified
+        Minds","series":"Sun \u0026 Moon","printedTotal":236,"total":258,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"UNM","releaseDate":"2019/08/02","updatedAt":"2020/09/25
+        10:09:00","images":{"symbol":"https://images.pokemontcg.io/sm11/symbol.png","logo":"https://images.pokemontcg.io/sm11/logo.png"}},{"id":"sm115","name":"Hidden
+        Fates","series":"Sun \u0026 Moon","printedTotal":68,"total":69,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"HIF","releaseDate":"2019/08/23","updatedAt":"2019/08/23
+        15:59:00","images":{"symbol":"https://images.pokemontcg.io/sm115/symbol.png","logo":"https://images.pokemontcg.io/sm115/logo.png"}},{"id":"sma","name":"Shiny
         Vault","series":"Sun \u0026 Moon","printedTotal":94,"total":94,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"releaseDate":"2019/08/23","updatedAt":"2020/05/01
-        16:06:00","images":{"symbol":"https://images.pokemontcg.io/sma/symbol.png","logo":"https://images.pokemontcg.io/sma/logo.png"}}],"page":1,"pageSize":250,"count":17,"totalCount":17}'
-  recorded_at: Fri, 06 Nov 2020 06:00:12 GMT
+        16:06:00","images":{"symbol":"https://images.pokemontcg.io/sma/symbol.png","logo":"https://images.pokemontcg.io/sma/logo.png"}},{"id":"sm12","name":"Cosmic
+        Eclipse","series":"Sun \u0026 Moon","printedTotal":236,"total":271,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"CEC","releaseDate":"2019/11/01","updatedAt":"2020/08/14
+        09:35:00","images":{"symbol":"https://images.pokemontcg.io/sm12/symbol.png","logo":"https://images.pokemontcg.io/sm12/logo.png"}},{"id":"swshp","name":"SWSH
+        Black Star Promos","series":"Sword \u0026 Shield","printedTotal":74,"total":74,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"PR-SWSH","releaseDate":"2019/11/15","updatedAt":"2020/11/15
+        10:00:00","images":{"symbol":"https://images.pokemontcg.io/swshp/symbol.png","logo":"https://images.pokemontcg.io/swshp/logo.png"}},{"id":"swsh1","name":"Sword
+        \u0026 Shield","series":"Sword \u0026 Shield","printedTotal":202,"total":216,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"SSH","releaseDate":"2020/02/07","updatedAt":"2020/08/14
+        09:35:00","images":{"symbol":"https://images.pokemontcg.io/swsh1/symbol.png","logo":"https://images.pokemontcg.io/swsh1/logo.png"}},{"id":"swsh2","name":"Rebel
+        Clash","series":"Sword \u0026 Shield","printedTotal":192,"total":209,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"RCL","releaseDate":"2020/05/01","updatedAt":"2020/09/25
+        10:09:00","images":{"symbol":"https://images.pokemontcg.io/swsh2/symbol.png","logo":"https://images.pokemontcg.io/swsh2/logo.png"}},{"id":"swsh3","name":"Darkness
+        Ablaze","series":"Sword \u0026 Shield","printedTotal":189,"total":201,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"DAA","releaseDate":"2020/08/14","updatedAt":"2020/10/25
+        13:45:00","images":{"symbol":"https://images.pokemontcg.io/swsh3/symbol.png","logo":"https://images.pokemontcg.io/swsh3/logo.png"}},{"id":"swsh35","name":"Champion''s
+        Path","series":"Sword \u0026 Shield","printedTotal":73,"total":80,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"CPA","releaseDate":"2020/09/25","updatedAt":"2020/10/25
+        13:45:00","images":{"symbol":"https://images.pokemontcg.io/swsh35/symbol.png","logo":"https://images.pokemontcg.io/swsh35/logo.png"}},{"id":"swsh4","name":"Vivid
+        Voltage","series":"Sword \u0026 Shield","printedTotal":185,"total":203,"legalities":{"unlimited":"Legal","standard":"Legal","expanded":"Legal"},"ptcgoCode":"VIV","releaseDate":"2020/11/13","updatedAt":"2020/11/13
+        16:20:00","images":{"symbol":"https://images.pokemontcg.io/swsh4/symbol.png","logo":"https://images.pokemontcg.io/swsh4/logo.png"}}],"page":1,"pageSize":250,"count":14,"totalCount":14}'
+  recorded_at: Tue, 23 Feb 2021 21:46:43 GMT
 - request:
     method: get
-    uri: https://beta.pokemontcg.io/v2/sets?page=2&q=legalities.standard:legal
+    uri: https://api.pokemontcg.io/v2/sets?page=2&q=legalities.standard:legal
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Content-Type:
       - application/json
-      X-Api-Key:
-      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
       User-Agent:
-      - Faraday v1.1.0
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -131,7 +121,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Nov 2020 06:00:12 GMT
+      - Tue, 23 Feb 2021 21:46:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -139,8 +129,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=df28444ab1f44cbe64bd7cc63e817f4701604642412; expires=Sun, 06-Dec-20
-        06:00:12 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=de71a59ae9d3c0c239fca5e719ece12d51614116804; expires=Thu, 25-Mar-21
+        21:46:44 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept-Encoding
       - Origin
@@ -157,44 +147,42 @@ http_interactions:
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Etag:
-      - W/"0344ec5e332de5b53b4630312bbc43dd"
+      - W/"91b98ee19c8abe5625913070220a00a0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d8595926-f2de-482d-9ce8-8538841f3008
+      - 119aaab1-ef0b-4d18-a39b-815f7d23f906
       X-Runtime:
-      - '0.059201'
+      - '0.046505'
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 063dbd2f210000f253238f7000000001
+      - '087274edce000026ffd8083000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=nEckLerCNlKR7FGW68dgRGjhdO8HrluW9YjLr3sqnj0YTqn7GbtnyhEs3dhHrnKPaT2JHUJYki%2FzO45aF5VEp%2F4k3ciCG3p00l27aZLZsg27Rlo%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=efXZ3itvv2frDHrhaFwLGoK6oIPq%2BNrZ0fsB6ylSXZslTidetPNPRCdGwyFh4KtdIa8dJxcvw2mKyjH2dNgtImYfoyb%2B3JdLUo%2BYTO%2Fmn2uKcg%3D%3D"}]}'
       Nel:
       - '{"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 5edc97c50ac6f253-ORD
+      - 626424294d4b26ff-MSP
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[],"page":2,"pageSize":250,"count":0,"totalCount":17}'
-  recorded_at: Fri, 06 Nov 2020 06:00:12 GMT
+      string: '{"data":[],"page":2,"pageSize":250,"count":0,"totalCount":14}'
+  recorded_at: Tue, 23 Feb 2021 21:46:44 GMT
 - request:
     method: get
-    uri: https://beta.pokemontcg.io/v2/sets?page=2&q=legalities.standard:legal
+    uri: https://api.pokemontcg.io/v2/sets?page=2&q=legalities.standard:legal
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Content-Type:
       - application/json
-      X-Api-Key:
-      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
       User-Agent:
-      - Faraday v1.1.0
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -205,7 +193,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Nov 2020 06:00:12 GMT
+      - Tue, 23 Feb 2021 21:46:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -213,8 +201,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dc48c8f7e2123c20a5846b6be7e3b27771604642412; expires=Sun, 06-Dec-20
-        06:00:12 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d105fe4f967e01c7c53071f2a00ddefea1614116804; expires=Thu, 25-Mar-21
+        21:46:44 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept-Encoding
       - Origin
@@ -231,29 +219,29 @@ http_interactions:
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Etag:
-      - W/"0344ec5e332de5b53b4630312bbc43dd"
+      - W/"91b98ee19c8abe5625913070220a00a0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6af619ab-c88b-4d34-a33c-1881824b90a1
+      - 0aad05db-2d54-4ee0-9986-ce7cc80d94b5
       X-Runtime:
-      - '0.055550'
+      - '0.051927'
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 063dbd2fdf0000040cd8093000000001
+      - '087274eea800003fdfa03c4000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=2DW63T3c49rWUoK0uzat1u0EkskcG3kpZ1yyP%2F1dPVL3IWZ0zGzncIurkaJljNW4wX1Ca4Dzt%2BBTdGtg8FFhRe3QaEmqc7fEJBu4kzbHPEadSeE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=mfwfSW5jpijL%2BlFqMNhUHuffBG5ODgsrCfQjry353TqxYJChigSuRAZz83G2MoEyQgF28p7hfGUvRIhOd0wGuxiBDsoIEbc0sCIK4wamH0IzLg%3D%3D"}],"max_age":604800}'
       Nel:
-      - '{"report_to":"cf-nel","max_age":604800}'
+      - '{"max_age":604800,"report_to":"cf-nel"}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 5edc97c63c46040c-ORD
+      - 6264242aa9673fdf-YYZ
     body:
       encoding: ASCII-8BIT
-      string: '{"data":[],"page":2,"pageSize":250,"count":0,"totalCount":17}'
-  recorded_at: Fri, 06 Nov 2020 06:00:12 GMT
+      string: '{"data":[],"page":2,"pageSize":250,"count":0,"totalCount":14}'
+  recorded_at: Tue, 23 Feb 2021 21:46:44 GMT
 recorded_with: VCR 6.0.0

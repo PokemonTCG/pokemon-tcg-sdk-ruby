@@ -16,7 +16,7 @@ class CardTest < Minitest::Test
       assert_equal 'Renegade Pulse', card.abilities.first.name
       assert_equal "Prevent all effects of attacks, including damage, done to this Pokémon by your opponent's Mega Evolution Pokémon.", card.abilities.first.text
       assert_equal 'Ability', card.abilities.first.type
-      assert_equal 170, card.hp
+      assert_equal "170", card.hp
       assert_equal ["Colorless","Colorless","Colorless"], card.retreat_cost
       assert_equal 3, card.converted_retreat_cost
       assert_equal "57", card.number
@@ -25,7 +25,7 @@ class CardTest < Minitest::Test
       assert_equal "XY", card.set.series
       assert_equal "Ancient Origins", card.set.name
       assert_equal "xy7", card.set.id
-      assert_equal ["When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."], card.rules
+      assert_equal ["Pokémon-EX rule: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."], card.rules
       assert_equal ["Dragon"], card.types
       assert card.attacks.any? {|attack| attack.cost == ["Grass","Psychic","Colorless","Colorless"] &&
                                          attack.name == "Chaos Wheel" &&
@@ -69,10 +69,10 @@ class CardTest < Minitest::Test
   
   def test_all_returns_all_cards
     VCR.use_cassette('all_cards') do
-      stub_request(:any, "https://beta.pokemontcg.io/v2/cards").
+      stub_request(:any, "https://api.pokemontcg.io/v2/cards").
         to_return(:body => File.new('test/responses/sample_cards.json'), :status => 200, :headers => {"Content-Type"=> "application/json"})
       
-      stub_request(:any, "https://beta.pokemontcg.io/v2/cards?page=2").
+      stub_request(:any, "https://api.pokemontcg.io/v2/cards?page=2").
         to_return(:body => File.new('test/responses/no_cards.json'), :status => 200, :headers => {"Content-Type"=> "application/json"})
         
       cards = Pokemon::Card.all

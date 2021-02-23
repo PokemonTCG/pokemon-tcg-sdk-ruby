@@ -2,17 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://beta.pokemontcg.io/v2/types
+    uri: https://api.pokemontcg.io/v2/types
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Content-Type:
       - application/json
-      X-Api-Key:
-      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
       User-Agent:
-      - Faraday v1.1.0
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 06 Nov 2020 06:00:14 GMT
+      - Tue, 23 Feb 2021 21:46:40 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d1c9945fa063173a80dc42095937a7b731604642414; expires=Sun, 06-Dec-20
-        06:00:14 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=dc61111b1923d1776496b5c5ea86481771614116799; expires=Thu, 25-Mar-21
+        21:46:39 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept-Encoding
       - Origin
@@ -53,25 +51,25 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e8f337fe-7c3f-4377-a430-569d048b1bdf
+      - 89eacdac-87e3-477d-abab-903465b43a2f
       X-Runtime:
-      - '0.054008'
+      - '0.043447'
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 063dbd382e00008835bf1a7000000001
+      - '087274ddd20000269e540b0000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=5kktgIoKh%2Bj0FLHrql6KcR6st%2Fvp1KXvZxQZmkGq4%2F2LqaWTOcmiQ85LiDXxidcBp6kmku%2BHwnkaUKRtC%2BTRURc5Ez%2Fp8MDpclSpnMxON6Gvbwk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=WI%2F4mRhWrJFZeCRGlgHXV3prfZCDPJnUcQHcI2TInP8ghYENeEbLwB3kHE5XSkY3Co7wKnsDTeKIAaWTqfgsdx%2FB3NDStAzz1iFX4V%2FFITOqsQ%3D%3D"}],"max_age":604800}'
       Nel:
-      - '{"report_to":"cf-nel","max_age":604800}'
+      - '{"max_age":604800,"report_to":"cf-nel"}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 5edc97d37efa8835-ORD
+      - 6264240fba80269e-MSP
     body:
       encoding: ASCII-8BIT
       string: '{"data":["Colorless","Darkness","Dragon","Fairy","Fighting","Fire","Grass","Lightning","Metal","Psychic","Water"]}'
-  recorded_at: Fri, 06 Nov 2020 06:00:14 GMT
+  recorded_at: Tue, 23 Feb 2021 21:46:40 GMT
 recorded_with: VCR 6.0.0

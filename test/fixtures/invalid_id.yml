@@ -2,17 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://beta.pokemontcg.io/v2/cards/zzzz
+    uri: https://api.pokemontcg.io/v2/cards/zzzz
     body:
       encoding: US-ASCII
       string: ''
     headers:
       Content-Type:
       - application/json
-      X-Api-Key:
-      - 3dd44c7a-37d7-4f40-87d6-7c60d06705ff
       User-Agent:
-      - Faraday v1.1.0
+      - Faraday v1.3.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,7 +21,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Fri, 06 Nov 2020 06:00:09 GMT
+      - Tue, 23 Feb 2021 21:46:40 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dfb151c7a9514a8ae3ab94e5f1644aaf31604642409; expires=Sun, 06-Dec-20
-        06:00:09 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
+      - __cfduid=d8b6ee342b2a29ccde15901f6e5a101001614116800; expires=Thu, 25-Mar-21
+        21:46:40 GMT; path=/; domain=.pokemontcg.io; HttpOnly; SameSite=Lax; Secure
       Vary:
       - Accept-Encoding
       - Origin
@@ -51,25 +49,25 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 5af7345b-22e9-4ef5-9d82-f371096eb4ba
+      - 827da647-c9f2-4793-b096-d32c8bd82392
       X-Runtime:
-      - '0.037672'
+      - '0.031448'
       Cf-Cache-Status:
       - DYNAMIC
       Cf-Request-Id:
-      - 063dbd24270000f22628134000000001
+      - '087274dfba0000f01598af8000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=OIEN8E4JIqRGvlwuq248bc377c0ePaOtRdcrOqPACHOfUm%2Bd3G3bOpArxcFa0h3wmQsJDsMihlUZgcKfzw9H5ZR3S8nRL0dJkC6j0lg%2FxGyAVPw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=78Liww9y9wdehYEyDH5CBdVQ%2FQoRnIhoJOq8%2B1%2FaLBNlpEYX21ixbUBJqpFfa9c83FofOepHsF2GgwgTSCxZHb0EzY%2BVtgf6Q6Qc9IPtWuTbrw%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 5edc97b37b36f226-ORD
+      - 62642412ce35f015-EWR
     body:
       encoding: ASCII-8BIT
       string: '{"error":{"message":"The requested resource was not found.","code":404}}'
-  recorded_at: Fri, 06 Nov 2020 06:00:09 GMT
+  recorded_at: Tue, 23 Feb 2021 21:46:40 GMT
 recorded_with: VCR 6.0.0

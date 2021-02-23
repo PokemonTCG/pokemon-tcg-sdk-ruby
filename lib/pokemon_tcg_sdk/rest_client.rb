@@ -31,9 +31,12 @@ module Pokemon
     protected
     
     def self.client
+      headers = {'Content-Type' => 'application/json'}
+      headers['X-Api-Key'] = Pokemon.configuration.api_key unless Pokemon.configuration.api_key.nil?
+
       @client = Faraday.new(
         url: "#{API_URL}/v2",
-        headers: {'Content-Type' => 'application/json', 'X-Api-Key' => Pokemon.configuration.api_key}
+        headers: headers
       )
     end
 
