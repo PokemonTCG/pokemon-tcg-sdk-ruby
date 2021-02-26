@@ -51,7 +51,7 @@ module Pokemon
           if !fetch_all
             break
           else
-            where(page: page += 1)
+            @query.merge!(page: page += 1)
           end
         else
           break
