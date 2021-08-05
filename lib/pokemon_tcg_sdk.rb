@@ -15,6 +15,7 @@ require "pokemon_tcg_sdk/legalities"
 require "pokemon_tcg_sdk/card_images"
 require "pokemon_tcg_sdk/set_images"
 require "pokemon_tcg_sdk/tcgplayer"
+require "pokemon_tcg_sdk/cardmarket"
 require "pokemon_tcg_sdk/ancient_trait"
 require "pokemon_tcg_sdk/rarity"
 

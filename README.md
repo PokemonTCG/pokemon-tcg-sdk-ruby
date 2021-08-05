@@ -74,6 +74,7 @@ To configure your API Key:
     national_pokedex_numbers
     legalities
     tcgplayer
+    cardmarket
     images
     flavor_text
 
