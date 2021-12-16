@@ -73,6 +73,7 @@ To configure your API Key:
     rarity
     national_pokedex_numbers
     legalities
+    regulation_mark
     tcgplayer
     cardmarket
     images
