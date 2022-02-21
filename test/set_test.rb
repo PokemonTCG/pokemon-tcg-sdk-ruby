@@ -48,9 +48,11 @@ class SetTest < Minitest::Test
       assert_equal base_cards.size, 102
       assert_equal base_cards.size, base_cards_ref.size
 
-      ref_ids = base_cards_ref.map(&:id)
-      base_cards.each do |card|
-        assert_equal ref_ids.include?(card.id), true
+      ids = base_cards.map(&:id)
+      assert_equal ids.include?('base1-1'), true
+
+      base_cards_ref.each do |card|
+        assert_equal ids.include?(card.id), true
       end
     end
   end
