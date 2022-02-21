@@ -47,5 +47,12 @@ module Pokemon
     def self.where(args)
       QueryBuilder.new(Set).where(args)
     end
+
+    # Accessor for querying all the cards in this set
+    #
+    # @return [Array<Card>] Array of Card objects
+    def cards
+      QueryBuilder.new(Card).where(q: '!set.name:"' + self.name + '" !set.series:"' + self.series + '"')
+    end
   end
 end

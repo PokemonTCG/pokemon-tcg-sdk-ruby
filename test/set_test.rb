@@ -38,4 +38,20 @@ class SetTest < Minitest::Test
       assert_equal 'Legal', sets[0].legalities.standard
     end
   end
+
+  def test_cards_returns_all_cards_in_set
+    VCR.use_cassette('base_set_cards') do
+      base_set = Pokemon::Set.where(q: '!name:Base !series:Base').first
+      base_cards_ref = Pokemon::Card.where(q: '!set.name:"Base" !set.series:"Base"')
+      base_cards = base_set.cards
+
+      assert_equal base_cards.size, 102
+      assert_equal base_cards.size, base_cards_ref.size
+
+      ref_ids = base_cards_ref.map(&:id)
+      base_cards.each do |card|
+        assert_equal ref_ids.include?(card.id), true
+      end
+    end
+  end
 end
