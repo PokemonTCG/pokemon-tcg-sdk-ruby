@@ -13,7 +13,7 @@ module Pokemon
   end
 
   class TcgPlayerPrices
-    attr_accessor :normal, :holofoil, :reverse_holofoil, :first_edition_holofoil, :first_edition_normal
+    attr_accessor :normal, :holofoil, :reverse_holofoil, :first_edition_holofoil, :first_edition_normal, :first_edition, :unlimited
     
     def self.from_json(json)
       price = TcgPlayerPrices.new
@@ -22,6 +22,8 @@ module Pokemon
       price.reverse_holofoil = TcgPlayerPriceValues.from_json(json['reverseHolofoil']) if !json['reverseHolofoil'].nil?
       price.first_edition_holofoil = TcgPlayerPriceValues.from_json(json['1stEditionHolofoil']) if !json['1stEditionHolofoil'].nil?
       price.first_edition_normal = TcgPlayerPriceValues.from_json(json['1stEditionNormal']) if !json['1stEditionNormal'].nil?
+      price.first_edition = TcgPlayerPriceValues.from_json(json['1stEdition']) if !json['1stEdition'].nil?
+      price.unlimited = TcgPlayerPriceValues.from_json(json['unlimited']) if !json['unlimited'].nil?
 
       price
     end

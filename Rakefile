@@ -16,6 +16,6 @@ Pokemon.configure do |config|
 end
 
 task :card do
-  card = Pokemon::Card.find('xy1-1')
-  puts card.tcgplayer.updated_at
+  card = Pokemon::Card.find('base2-17')
+  puts card.tcgplayer.prices.first_edition.market
 end
