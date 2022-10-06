@@ -22,3 +22,6 @@ tmp
 *.a
 mkmf.log
 .vscode
+.idea
+.ruby-version
+.ruby-gemset
